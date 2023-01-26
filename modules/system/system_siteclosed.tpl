@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
+<head>
 		<{assign var=theme_name value=$xoTheme->folderName}>
 		<meta charset="<{$xoops_charset}>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,82 +13,118 @@
 		<meta name="generator" content="XOOPS">
         <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>" />
         <link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon" />
-        <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
-        <link href="<{xoImgUrl}>/dist/css/styles.css" rel="stylesheet" />
-		<link href="<{xoImgUrl}>xoops.css" rel="stylesheet" />
-        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-        <{$xoops_module_header}>
-    </head>
-    <body class="site-closed-body">
-        <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-5">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"> 
-										<p><img class="mx-auto d-block img-fluid" src="<{$xoops_url}>/images/logo.png" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"></p>
-										<h3 class="text-center font-weight-light my-4"><{$xoops_sitename}><br><small><span class='text-secondary'><{$xoops_slogan}></span></small></h3>
-										<p class="text-muted"><{$lang_siteclosemsg}></p>
-									</div>
-                                    <div class="card-body">
-                                        <form action="<{xoAppUrl user.php}>" method="post" role="form">
-                                            <div class="form-group">
-                                                <label class="small mb-1" for="inputUsername"><{$smarty.const.THEME_USERNAME}></label>
-                                                <input class="form-control py-4" type="text" name="uname" placeholder="<{$smarty.const.THEME_USERNAME}>" autocomplete="off" required/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1" for="inputPassword"><{$lang_password}></label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" name="pass" placeholder="<{$smarty.const.THEME_PASSWORD}>" autocomplete="off" required/>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
-                                                    <label class="custom-control-label" name="rememberme" for="rememberPasswordCheck"><{$smarty.const.THEME_REMEMBERME}></label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-											<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>">
-											<input type="hidden" name="xoops_login" value="1">
-											<input type="hidden" name="op" value="login" />
-                                                <!--<a class="small" href="password.html">Forgot Password?</a>-->
-												 <button type="submit" class="btn btn-primary">
-													<{$smarty.const.THEME_ACCOUNT_LOGIN}>
-												</button>
-												<{if $redirect_message|default:false}>
-													<p class="text-danger"><{$redirect_message}></p>
-												<{/if}>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!--<div class="card-footer text-center">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-            <!--<div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted"><{$xoops_footer}></div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="<{xoImgUrl}>assets/css/bootstrap.min.css">
+    <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
+ 
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            font-family: "Nunito Sans";
+        }
+
+        .form-control {
+            line-height: 2;
+        }
+		
+		.fill img {
+			object-fit: cover;
+			width:100%; height :100%;
+			background-color: #FFFFFF;
+		}
+
+        .bg-custom {
+            background-color: #0151a9;
+        }
+
+        .btn-custom {
+            background-color: #3d2e4f;
+            color: #fff;
+        }
+
+        .btn-custom:hover {
+            background-color: #321d2f;
+            color: #fff;
+        }
+		
+		.title-header {
+            color: #fff;
+			text-decoration: none;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        a,
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        @media(max-width: 932px) {
+            .display-none {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row m-0 h-100">
+        <div class="fill col p-0 text-center d-flex justify-content-center align-items-center display-none">
+            <img src="<{xoImgUrl}>assets/img/default_image.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"  class="w-100">
         </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="<{xoImgUrl}>/dist/js/scripts.js"></script>
-    </body>
+		<div class="fill d-sm-none p-0 d-flex justify-content-center align-items-center">
+			<img src="<{xoImgUrl}>assets/img/default_image.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid">
+        </div>
+        <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
+				<img src="<{$xoops_url}>/images/logo.png" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"><br>
+				<h4 class='title-header p-3'><{$xoops_sitename}></h4>
+				<label><{$xoops_slogan}></label>	
+				<p class="text-muted"><{$lang_siteclosemsg}></p>
+	
+            <form class="w-75" action="<{xoAppUrl user.php}>" method="post">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"><{$smarty.const.THEME_USERNAME}></label>
+					<input type="text" name="uname" id="exampleFormControlInput1" class="form-control" placeholder="<{$smarty.const.THEME_USERNAME}>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput2" class="form-label"><{$smarty.const.THEME_PASSWORD}></label>
+					<input type="password" name="pass" class="form-control" id="exampleFormControlInput2" placeholder="<{$smarty.const.THEME_PASSWORD}>" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                            <label class="form-check-label" name="rememberme" for="rememberPasswordCheck">
+                                <{$smarty.const.THEME_REMEMBERME}>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+				<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>">
+				<input type="hidden" name="xoops_login" value="1">
+				<input type="hidden" name="op" value="login" />
+                <button type="submit" class="btn btn-custom btn-lg btn-block mt-3"><{$smarty.const.THEME_ACCOUNT_LOGIN}></button>
+					<{if $redirect_message|default:false}>
+                    <br><p><button type="button" class="btn btn-danger btn-block btn-sm"><{$redirect_message}></button></p>
+					<{/if}>
+            </form>
+			<div class="pt-4 text-white mb-3 mb-md-0">
+				<small> <{$xoops_footer}></small> <br />
+			</div>
+        </div>
+		
+    </div>
+</body>
+
 </html>
