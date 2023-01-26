@@ -19,26 +19,27 @@
 		<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 			<{if $xoops_isadmin}>
-                <a class="dropdown-item" href="<{$xoops_url}>/admin.php" target="_blank"><{$smarty.const.THEME_ADMINPANEL}></a>
+                <li><a class="dropdown-item" href="<{$xoops_url}>/admin.php" target="_blank"><{$smarty.const.THEME_ADMINPANEL}></a>
 				<div class="dropdown-divider"></div>
 			<{/if}>
-                <a class="dropdown-item" href="<{$xoops_url}>/user.php"><{$smarty.const.THEME_MYPROFILE}></a>
-                <a class="dropdown-item" href="<{$xoops_url}>/edituser.php"><{$smarty.const.THEME_UPDATEPROFILE}></a>
-				<a class="dropdown-item" href="<{$xoops_url}>/notifications.php"><{$smarty.const.THEME_ACCOUNT_NOTIFICATIONS}></a>
+                <li><a class="dropdown-item" href="<{$xoops_url}>/user.php"><{$smarty.const.THEME_MYPROFILE}></a></li>
+                <li><a class="dropdown-item" href="<{$xoops_url}>/edituser.php"><{$smarty.const.THEME_UPDATEPROFILE}></a></li>
+				<li><a class="dropdown-item" href="<{$xoops_url}>/notifications.php"><{$smarty.const.THEME_ACCOUNT_NOTIFICATIONS}></a></li>
 				<{xoInboxCount assign='unread_count'}>
 				<{if $unread_count > 0}>
-				<a class="dropdown-item" href="<{xoAppUrl viewpmsg.php}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}>
-                    <span class="badge badge-primary badge-pill"><{$unread_count}></span></a>
+				<li><a class="dropdown-item" href="<{xoAppUrl viewpmsg.php}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}>
+                    <span class="badge badge-primary badge-pill"><{$unread_count}></span></a></li>
 				<{else}>
-				<a class="dropdown-item" href="<{xoAppUrl viewpmsg.php}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}></a>
+				<li><a class="dropdown-item" href="<{xoAppUrl viewpmsg.php}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}></a></li>
 				<{/if}>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="<{$xoops_url}>/user.php?op=logout"><{$smarty.const.THEME_ACCOUNT_LOGOUT}></a>
-            </div>
+                <li><a class="dropdown-item" href="<{$xoops_url}>/user.php?op=logout"><{$smarty.const.THEME_ACCOUNT_LOGOUT}></a></li>
+            </ul>
         </li>
     </ul>
+	
 	<{/if}>      
             
     </nav>
