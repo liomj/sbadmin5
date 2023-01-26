@@ -5,7 +5,7 @@
 		<meta charset="<{$xoops_charset}>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="keywords" content="<{$xoops_meta_keywords}>">
+		<meta name="keywords" content="<{$xoops_meta_keywords}>">
 		<meta name="description" content="<{$xoops_meta_description}>">
 		<meta name="robots" content="<{$xoops_meta_robots}>">
 		<meta name="rating" content="<{$xoops_meta_rating}>">
@@ -18,7 +18,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <{$xoops_module_header}>
-         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="<{xoImgUrl}>assets/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
    	    <link href="<{xoImgUrl}>assets/css/xoops.css" rel="stylesheet" />
@@ -30,7 +30,7 @@
 			<{includeq file="$theme_name/tpl/leftBlock.tpl"}>
 			</div>
             <div id="layoutSidenav_content">
-       <{includeq file="$theme_name/tpl/content.tpl"}>        
+                <{includeq file="$theme_name/tpl/content.tpl"}>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -47,10 +47,5 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="<{xoImgUrl}>assets/js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="<{xoImgUrl}>assets/demo/chart-area-demo.js"></script>
-        <script src="<{xoImgUrl}>assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="<{xoImgUrl}>assets/js/datatables-simple-demo.js"></script>
-    </body>
+</body>
 </html>
