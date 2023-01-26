@@ -30,7 +30,7 @@
                 <{if $xoops_menu_sbadmin5}>
 							<{$xoops_menu_sbadmin5}>
 						<{else}>
-                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <div class="sb-sidenav-menu-heading"><{$smarty.const.THEME_MAINMENU}></div>
             				<a class="nav-link<{if !$menu.selected|default:false}> active<{/if}>" href="<{xoAppUrl }>" title="<{$smarty.const.THEME_HOME}>">
 							<div class="sb-nav-link-icon">&nbsp;<i class="fas fa-home"></i>&nbsp;</div><{$smarty.const.THEME_HOME}></a>
 	

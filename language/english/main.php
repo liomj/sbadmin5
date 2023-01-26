@@ -5,6 +5,7 @@ define('THEME_CLOSE', 'Close');
 
 //Nav Menu
 define('THEME_HOME', 'Home');
+define('THEME_MAINMENU', 'Main Menu');
 define('THEME_MENU', 'Menu');
 define('THEME_SUBMENU', 'Sub Menu');
 define('THEME_MENU1', 'About Us');
