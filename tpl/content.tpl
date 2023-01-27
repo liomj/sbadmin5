@@ -61,7 +61,7 @@
     <div class="container-fluid">
 		<div class="card-header">
             <{if $xoops_pagetitle !=''}>
-            <h4 class="mt-2"><{$xoops_pagetitle}></h4>
+            <h5 class="mt-2"><{$xoops_pagetitle}></h5>
             <{/if}>
         </div>
         <div class="card-body">
