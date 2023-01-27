@@ -1,4 +1,4 @@
-<div class="text-center">
+
 
     <form role="search" action="<{xoAppUrl search.php}>" method="get">
 
@@ -10,7 +10,7 @@
 
             <span class="input-group-btn">
 
-                <button class="btn btn-secondary" type="submit">
+                <button class="btn btn-primary" type="submit">
 
                     <span class="fa fa-search"></span>
 
@@ -22,9 +22,9 @@
 
     </form>
 
-    <p class="text-right">
+    <p class="d-flex justify-content-end small">
         <a href="<{xoAppUrl search.php}>" title="<{$block.lang_advsearch}>">
             <{$block.lang_advsearch}>
         </a>
     </p>
-</div>
+
