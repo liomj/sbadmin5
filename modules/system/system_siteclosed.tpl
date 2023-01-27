@@ -87,10 +87,10 @@
 
 <body>
     <div class="row m-0 h-100">
-        <div class="fill col p-0 text-center d-flex justify-content-center align-items-center display-none">
+        <div class="fill col p-0 text-center d-flex justify-content-center align-items-center d-none d-lg-block">
             <img src="<{xoImgUrl}>assets/img/background.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"  class="w-100">
         </div>
-		<div class="fill d-sm-none p-0 d-flex justify-content-center align-items-center">
+		<div class="fill p-0 d-flex justify-content-center align-items-center d-block d-sm-none">
 			<img src="<{xoImgUrl}>assets/img/background.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid">
         </div>
         <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
