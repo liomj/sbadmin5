@@ -71,10 +71,10 @@
 						<{if $block.title}>
 							<div class="sb-sidenav-menu-heading"><{$block.title}></div>
 						<{/if}> <{$block.content}> <{/foreach}>
-            </div>
-        </div>
+         
         <{/if}>
-        
+           </div>
+        </div>
 		
 	<{if $xoops_isuser}>
         <div class="sb-sidenav-footer">
