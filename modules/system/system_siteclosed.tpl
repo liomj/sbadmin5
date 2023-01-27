@@ -127,7 +127,7 @@
                     <br><p><button type="button" class="btn btn-danger btn-block btn-sm"><{$redirect_message}></button></p>
 					<{/if}>
             </form>
-			<div class="pt-4 text-white mb-3 mb-md-0">
+			<div class="pt-4 text-dark mb-3 mb-md-0">
 				<small> <{$xoops_footer}></small> <br />
 			</div>
         </div>
