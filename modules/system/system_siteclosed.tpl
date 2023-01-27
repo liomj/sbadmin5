@@ -25,6 +25,11 @@
             height: 100vh;
             font-family: "Nunito Sans";
         }
+		
+		h4, .h4{
+			padding: 0px;
+			margin: 0px;
+		}
 
         .form-control {
             line-height: 2;
@@ -37,7 +42,7 @@
 		}
 
         .bg-custom {
-            background-color: #0151a9;
+            background-color: #FFFFFF;
         }
 
         .btn-custom {
@@ -51,14 +56,16 @@
         }
 		
 		.title-header {
-            color: #fff;
+            color: #999;
 			text-decoration: none;
         }
 
         label {
-            color: #fff;
+            color: #888;
         }
-
+		alert {
+			display:inline-block;
+		}
         a,
         a:hover {
             color: #fff;
@@ -81,25 +88,26 @@
 <body>
     <div class="row m-0 h-100">
         <div class="fill col p-0 text-center d-flex justify-content-center align-items-center display-none">
-            <img src="<{xoImgUrl}>assets/img/default_image.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"  class="w-100">
+            <img src="<{xoImgUrl}>assets/img/background.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"  class="w-100">
         </div>
 		<div class="fill d-sm-none p-0 d-flex justify-content-center align-items-center">
-			<img src="<{xoImgUrl}>assets/img/default_image.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid">
+			<img src="<{xoImgUrl}>assets/img/background.jpg" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid">
         </div>
         <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
 				<img src="<{$xoops_url}>/images/logo.png" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"><br>
 				<h4 class='title-header p-3'><{$xoops_sitename}></h4>
-				<label><{$xoops_slogan}></label>	
-				<p class="text-muted"><{$lang_siteclosemsg}></p>
+				<label class='text-dark'><{$xoops_slogan}></label>	
+				 <hr class="mt-1 mb-1"/>
+				<div class="text-muted"><{$lang_siteclosemsg}></div>
 	
             <form class="w-75" action="<{xoAppUrl user.php}>" method="post">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label"><{$smarty.const.THEME_USERNAME}></label>
-					<input type="text" name="uname" id="exampleFormControlInput1" class="form-control" placeholder="<{$smarty.const.THEME_USERNAME}>" required>
+                    <label for="<{$smarty.const.THEME_USERNAME}>" class="form-label"><{$smarty.const.THEME_USERNAME}></label>
+					<input type="text" name="uname" class="form-control" placeholder="<{$smarty.const.THEME_USERNAME}>" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput2" class="form-label"><{$smarty.const.THEME_PASSWORD}></label>
-					<input type="password" name="pass" class="form-control" id="exampleFormControlInput2" placeholder="<{$smarty.const.THEME_PASSWORD}>" required>
+                    <label for="<{$smarty.const.THEME_PASSWORD}>" class="form-label"><{$smarty.const.THEME_PASSWORD}></label>
+					<input type="password" name="pass" class="form-control" placeholder="<{$smarty.const.THEME_PASSWORD}>" required>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
