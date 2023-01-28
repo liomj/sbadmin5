@@ -2,11 +2,16 @@
 <div class="row">
     <div class="col-xs-6 col-md-6 aligncenter">
         <{if $avatar}>
-            <img src="<{$avatar}>" alt="<{$uname}>" class="img-responsive img-rounded img-thumbnail">
+            <img src="<{$avatar}>" alt="<{$uname}>" class="img-fluid rounded-circle">
         <{/if}>
         <div class="aligncenter">
             <ul class="list-unstyled">
-                <li><h2><span class="label label-info"><{$uname}></span></h2></li>
+				<{if $xoops_name}>
+						<li><h5><span class="label label-info"><{$name}></span></h5></li>
+				<{else}>
+						<li><h5><span class="label label-info"><{$uname}></span></h5></li>
+				<{/if}>	
+          
                 <{if $email}>
                     <li><span class="label label-info"><{$email}></span></li>
                 <{/if}>
@@ -67,11 +72,11 @@
 <{foreach item=category from=$categories}>
     <{if isset($category.fields)}>
         <ul id="profile-category-<{$category.cat_id}>" class="profile-values list-unstyled">
-            <li class="profile-category-title"><{$category.cat_title}></li>
+            <div class="d-grid"><button class="bbtn btn-dark btn-block"><{$category.cat_title}></button></div>
             <{foreach item=field from=$category.fields}>
                 <li><strong><{$field.title}>:</strong> <{$field.value}></li>
             <{/foreach}>
-        </ul>
+        
     <{/if}>
 <{/foreach}>
 
