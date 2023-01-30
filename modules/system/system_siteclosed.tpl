@@ -95,7 +95,7 @@
         </div>
         <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
 				<img src="<{$xoops_url}>/images/logo.png" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"><br>
-				<h4 class='title-header p-3'><{$xoops_sitename}></h4>
+				<h4 class='title-header p-3 text-center'><{$xoops_sitename}></h4>
 				<label class='text-dark'><{$xoops_slogan}></label>	
 				 <hr class="mt-1 mb-1"/>
 				<div class="text-muted"><{$lang_siteclosemsg}></div>
