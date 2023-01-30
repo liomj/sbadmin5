@@ -23,7 +23,8 @@
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
    	    <link href="<{xoImgUrl}>assets/css/xoops.css" rel="stylesheet" />
     </head>
-    <body class="sb-nav-fixed">
+    <!--<body class="sb-nav-fixed" id="<{$xoops_dirname}>">-->
+	<body id="<{$xoops_dirname}>">
       <{includeq file="$theme_name/tpl/topNav.tpl"}> 
         <div id="layoutSidenav">
 			<div id="layoutSidenav_nav">
