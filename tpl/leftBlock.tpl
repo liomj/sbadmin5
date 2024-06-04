@@ -3,13 +3,13 @@
     <{if $xoops_isuser}>
             <div class="clearfix">
               <div class="profile_pic">
-					<{if $xoops_avatar=='avatars/blank.gif'}>
+					<{if $xoops_avatar!='avatars/blank.gif'}>
 						<img src="<{$xoops_avatar}>" alt="<{$xoops_uname}>" title="<{$xoops_uname}>" class="img-circle profile_img">
 					<{else}>
 						<{if $xoops_name}>
-							<div class="profile_info"><span class="avatar-circle" title="<{$xoops_name}>"><{$xoops_name|substr:0:1 eq 'm'}></span></div>
+							<div class="profile_info"><a href="<{$xoops_url}>/user.php"><span class="avatar-circle" title="<{$xoops_name}>"><{$xoops_name|substr:0:1}></span></a></div>
 						<{else}>
-							<div class="profile_info"><span class="avatar-circle" title="<{$xoops_uname}>"><{$xoops_uname|substr:0:1 eq 'm'}></span></div>
+							<div class="profile_info"><a href="<{$xoops_url}>/user.php"><span class="avatar-circle" title="<{$xoops_uname}>"><{$xoops_uname|substr:0:1}></span></a></div>
 						<{/if}>	
 					<{/if}>
               </div>
@@ -28,7 +28,7 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <{if $xoops_menu_sbadmin5}>
-							<{$xoops_menu_sbadmin5}>
+							<{$xoops_menu_sbadmin5|default: false}>
 						<{else}>
                             <div class="sb-sidenav-menu-heading"><{$smarty.const.THEME_MAINMENU}></div>
             				<a class="nav-link<{if !$menu.selected|default:false}> active<{/if}>" href="<{xoAppUrl }>" title="<{$smarty.const.THEME_HOME}>">
