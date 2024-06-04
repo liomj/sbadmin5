@@ -1,6 +1,6 @@
 
 
-    <form role="search" action="<{xoAppUrl search.php}>" method="get">
+    <form role="search" action="<{xoAppUrl 'search.php'}>" method="get">
 
         <div class="input-group">
 
@@ -23,7 +23,7 @@
     </form>
 
     <p class="d-flex justify-content-end small">
-        <a href="<{xoAppUrl search.php}>" title="<{$block.lang_advsearch}>">
+        <a href="<{xoAppUrl 'search.php'}>" title="<{$block.lang_advsearch}>">
             <{$block.lang_advsearch}>
         </a>
     </p>

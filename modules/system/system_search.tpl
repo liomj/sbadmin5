@@ -13,7 +13,7 @@
 		<br>
 	<{/if}>
 	</div>
-	<{foreach item=search from=$search}>
+	<{foreach item=itemsearch from=$search}>
 		<br /><h3><button type="button" class="btn btn-danger btn-sm"><{$search.module_name}></button></h3>
 		<{foreach item=data from=$search.module_data}>
 			<div style="padding:8px;display:block;border-bottom:1px dashed #eeeeee;">

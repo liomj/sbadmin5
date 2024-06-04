@@ -11,7 +11,7 @@
 		<meta name="rating" content="<{$xoops_meta_rating}>">
 		<meta name="author" content="<{$xoops_meta_author}>">
 		<meta name="generator" content="XOOPS">
-        <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>" />
+        <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl 'backend.php'}>" />
         <link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon" />
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
@@ -100,7 +100,7 @@
 				 <hr class="mt-1 mb-1"/>
 				<div class="text-muted"><{$lang_siteclosemsg}></div>
 	
-            <form class="w-75" action="<{xoAppUrl user.php}>" method="post">
+            <form class="w-75" action="<{xoAppUrl 'user.php'}>" method="post">
                 <div class="mb-3">
                     <label for="<{$smarty.const.THEME_USERNAME}>" class="form-label"><{$smarty.const.THEME_USERNAME}></label>
 					<input type="text" name="uname" class="form-control" placeholder="<{$smarty.const.THEME_USERNAME}>" required>

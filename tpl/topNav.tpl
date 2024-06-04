@@ -5,7 +5,7 @@
             <a class="navbar-brand ps-3" href="<{$xoops_url}>/index.php"><{$xoops_sitename}></a>
 
             <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" role="search" action="<{xoAppUrl search.php}>" method="get">
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" role="search" action="<{xoAppUrl 'search.php'}>" method="get">
 			<div class="input-group">
 				<input class="form-control" type="text" name="query"  placeholder="<{$smarty.const.THEME_SEARCH_TEXT}>" aria-label="Search" aria-describedby="basic-addon2" />
 				<input type="hidden" name="action" value="results">
@@ -29,10 +29,10 @@
 				<li><a class="dropdown-item" href="<{$xoops_url}>/notifications.php"><{$smarty.const.THEME_ACCOUNT_NOTIFICATIONS}></a></li>
 				<{xoInboxCount assign='unread_count'}>
 				<{if $unread_count > 0}>
-				<li><a class="dropdown-item" href="<{xoAppUrl viewpmsg.php}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}>
+				<li><a class="dropdown-item" href="<{xoAppUrl 'viewpmsg.php'}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}>
                     <span class="badge badge-primary badge-pill"><{$unread_count}></span></a></li>
 				<{else}>
-				<li><a class="dropdown-item" href="<{xoAppUrl viewpmsg.php}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}></a></li>
+				<li><a class="dropdown-item" href="<{xoAppUrl 'viewpmsg.php'}>"><{$smarty.const.THEME_ACCOUNT_MESSAGES}></a></li>
 				<{/if}>
                 <div class="dropdown-divider"></div>
                 <li><a class="dropdown-item" href="<{$xoops_url}>/user.php?op=logout"><{$smarty.const.THEME_ACCOUNT_LOGOUT}></a></li>

@@ -11,7 +11,7 @@
 		<meta name="rating" content="<{$xoops_meta_rating}>">
 		<meta name="author" content="<{$xoops_meta_author}>">
 		<meta name="generator" content="XOOPS">
-        <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>" />
+        <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl 'backend.php'}>" />
         <link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon" />
         <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
 	    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
@@ -25,13 +25,13 @@
     </head>
     <!--<body class="sb-nav-fixed" id="<{$xoops_dirname}>">-->
 	<body id="<{$xoops_dirname}>">
-      <{includeq file="$theme_name/tpl/topNav.tpl"}> 
+      <{include file="$theme_name/tpl/topNav.tpl"}> 
         <div id="layoutSidenav">
 			<div id="layoutSidenav_nav">
-			<{includeq file="$theme_name/tpl/leftBlock.tpl"}>
+			<{include file="$theme_name/tpl/leftBlock.tpl"}>
 			</div>
             <div id="layoutSidenav_content">
-                <{includeq file="$theme_name/tpl/content.tpl"}>
+                <{include file="$theme_name/tpl/content.tpl"}>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
