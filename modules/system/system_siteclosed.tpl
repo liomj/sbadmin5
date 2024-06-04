@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="<{$xoops_langcode}>">
 <head>
 		<{assign var=theme_name value=$xoTheme->folderName}>
 		<meta charset="<{$xoops_charset}>">
@@ -95,10 +95,16 @@
         </div>
         <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
 				<img src="<{$xoops_url}>/images/logo.png" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"><br>
-				<h4 class='title-header p-3 text-center'><{$xoops_sitename}></h4>
-				<label class='text-dark'><{$xoops_slogan}></label>	
-				 <hr class="mt-1 mb-1"/>
-				<div class="text-muted"><{$lang_siteclosemsg}></div>
+				<h4 class='text-dark title-header p-3 text-center'><{$xoops_sitename}></h4>
+				<h4 class='text-muted'><{$xoops_slogan}></h4>	
+				 
+				<div class="text-muted p-3"><{$lang_siteclosemsg}></div>
+				<{if $redirect_message|default:false}>
+                <div class="alert alert-warning alert-dismissible">
+				 <a href="<{$xoops_url}>" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<{$redirect_message|strip_tags}>
+				</div>
+				<{/if}>
 	
             <form class="w-75" action="<{xoAppUrl 'user.php'}>" method="post">
                 <div class="mb-3">
@@ -123,9 +129,7 @@
 				<input type="hidden" name="xoops_login" value="1">
 				<input type="hidden" name="op" value="login" />
                 <button type="submit" class="btn btn-custom btn-lg btn-block mt-3"><{$smarty.const.THEME_ACCOUNT_LOGIN}></button>
-					<{if $redirect_message|default:false}>
-                    <br><p><button type="button" class="btn btn-danger btn-block btn-sm"><{$redirect_message}></button></p>
-					<{/if}>
+					
             </form>
 			<div class="pt-4 text-dark mb-3 mb-md-0">
 				<small> <{$xoops_footer}></small> <br />
