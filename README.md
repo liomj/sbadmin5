@@ -49,5 +49,5 @@ A Bootstrap 5 XOOPS Theme with minimal custom styling. Suitable theme in buildin
 	
 ## Preview
 
-[![SB Admin Preview](https://startbootstrap.com/assets/img/screenshots/templates/sb-admin.png)](https://startbootstrap.github.io/startbootstrap-sb-admin/)
+[![SB Admin Preview](https://pictr.com/images/2024/06/05/x5fJ6V.png)](https://startbootstrap.github.io/startbootstrap-sb-admin/)
 
