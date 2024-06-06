@@ -18,13 +18,13 @@
  * @version         $Id: skin_version.php 0 2010-07-21 18:47:04Z trabis $
  */
 
-$skinversion['template'] = 'templates/template.html';
+$skinVersion['template'] = 'templates/template.html';
 
-$skinversion['css'] = array();
+$skinVersion['css'] = array();
 
-$skinversion['js'] = array();
+$skinVersion['js'] = array();
 
-$skinversion['header'] = '';
+$skinVersion['header'] = '';
 
 
 //$skinVersion['template'] = 'templates/template.html';
